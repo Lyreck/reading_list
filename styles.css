@@ -1,0 +1,134 @@
+
+      :root {
+        --primary-color: #3b82f6;
+        --text-color: #000000;
+        --bg-color: #ffffff;
+        --card-bg: #f5f5f5;
+        --border-color: #e0e0e0;
+        --spacing: 1.5rem;
+        --border-radius: 8px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        text-align: left;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--spacing);
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: var(--primary-color);
+      }
+
+      /* Gallery styles */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--spacing);
+      }
+
+      .gallery-item {
+        position: relative;
+        aspect-ratio: 1;
+        overflow: hidden;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        
+      transition: all 0.3s ease;
+      &:hover {
+        transform: translateY(-2px);
+      }
+    
+      }
+
+      .gallery-image {
+        width: 100%;
+        height: 100%;
+      }
+
+      .gallery-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: var(--spacing);
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        color: white;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        transform: translateY(0);
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+
+      /* Card styles */
+      .card {
+        
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+          
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        
+      transition: all 0.3s ease;
+      &:hover {
+        transform: translateY(-2px);
+      }
+    
+      }
+
+      .card-header {
+        padding: var(--spacing);
+        background: var(--primary-color);
+        color: #ffffff;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 1024px) {
+        .gallery-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    

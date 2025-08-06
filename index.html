@@ -1,0 +1,218 @@
+
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Reading list</title>
+          <style>
+      :root {
+        --primary-color: #3b82f6;
+        --border-radius: 8px;
+        --spacing: 2rem;
+        --card-style: modern;
+        --text-align: left;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        margin: 0;
+        padding: var(--spacing);
+        background-color: #ffffff;
+        color: #000000;
+      }
+
+      .header {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background: var(--primary-color);
+        border-radius: var(--border-radius);
+        color: #ffffff;
+      }
+
+      .table-container {
+        overflow-x: auto;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: var(--text-align);
+      }
+
+      th, td {
+        padding: var(--spacing);
+        border: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #f5f5f5;
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--spacing);
+      }
+
+      .card {
+        background-color: #ffffff;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+
+      .card:hover { transform: translateY(-4px); }
+
+      .card-header {
+        padding: var(--spacing);
+        background-color: var(--primary-color);
+        color: #ffffff;
+      }
+
+      .card-content {
+        padding: var(--spacing);
+      }
+
+      .card-field {
+        margin-bottom: 0.5rem;
+      }
+
+      .field-label {
+        font-weight: 600;
+        margin-right: 0.5rem;
+      }
+
+      .gallery-grid {
+        display: grid;
+        gap: var(--spacing);
+      }
+
+      .gallery-item {
+        position: relative;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .gallery-image-container {
+        position: relative;
+        aspect-ratio: 1;
+      }
+
+      .gallery-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.3s;
+      }
+
+      .gallery-item:hover .gallery-image { transform: scale(1.05); }
+
+      .gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: var(--spacing);
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+        color: #ffffff;
+        transition: opacity 0.3s;
+        opacity: 0;
+      }
+
+      .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+      .gallery-title {
+        margin: 0;
+        font-size: 1.1rem;
+      }
+
+      .dashboard-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing);
+      }
+
+      .dashboard-card {
+        background-color: #ffffff;
+        border-radius: var(--border-radius);
+        padding: var(--spacing);
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .dashboard-value {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+
+      .dashboard-label {
+        color: #666;
+        margin-top: 0.5rem;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: calc(var(--border-radius) * 0.5);
+      }
+
+      .table-image {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+      }
+
+      .img-contain {
+        object-fit: contain;
+      }
+
+      .img-cover {
+        object-fit: cover;
+      }
+
+      .img-fill {
+        object-fit: fill;
+      }
+    </style>
+        </head>
+        <body>
+          <div class="header">
+            <h1>Reading list</h1>
+          </div>
+          
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>snippet</th><th>full title</th><th>link</th><th>comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>Lessons from a chimp</td><td>Lessons from a Chimp:AI 'Scheming' and the Quest for Ape Language</td><td></td><td>AI safety & organisation du champ de recherche</td>
+              </tr>
+            
+              <tr>
+                <td>Predicting worse off</td><td>The Value of Prediction in Identifying the Worst-Off</td><td>https://arxiv.org/abs/2501.19334</td><td>reco Eirik</td>
+              </tr>
+            
+              <tr>
+                <td>papier IA et service public, soizic</td><td>Le service public à l’épreuve de l’intelligence artificielle</td><td>https://www.jean-jaures.org/publication/le-service-public-a-lepreuve-de-lintelligence-artificielle/</td><td></td>
+              </tr>
+            
+              <tr>
+                <td>Education et IA Taddéi</td><td>Education et IA</td><td>https://www.enseignementsup-recherche.gouv.fr/fr/education-et-intelligence-artificielle-remise-de-deux-rapports-aux-ministres-elisabeth-borne-et-99578</td><td>pltuôt décrié sur les réseaux, à lire voir ce qu'ils racontent</td>
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    
+        </body>
+      </html>
+    
